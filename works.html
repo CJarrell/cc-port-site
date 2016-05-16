@@ -231,21 +231,29 @@
 <!-- works filter panel :ends -->
 
           <div id="works-container" class="works-container works-masonry-container clearfix white-bg">
-            <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/random/01.jpg">
-              <div class="works-item works-item-one-third zoom ui web">
-                <script id="portfolio-template" type="text/x-handlebars-template">
-                    {{#each projects}}
+            <script id="portfolio-template" type="text/x-handlebars-template">
+                {{#each projects}}
+                <div class="works-item works-item-one-half zoom ui web">
+                    <figure class="portfolio-cover works-item-inner" title="{{this.name}}">
+                       
+                        <img alt="Behance Project Image" title="" class="img-responsive portfolio-image"  src="{{this.covers.[404]}}"/>
+                        <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/01.jpg">
+                            <h2 class="portfolio-title color font2">{{this.name}}</h2>
+                            <div class="portfolio-fields works-item-inner">
+                                <ul class="field-list">
+                                    {{#each this.fields}}
+                                    <li class="field-item">
+                                        <p><span class="dark font4">{{this}}</span></p>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </a>
+                    </figure>
                     
-                        <figure class="portfolio-cover works-item-inner" title="{{this.name}}">
-                           
-                            <img alt="Behance Project Image" title="" class="img-responsive portfolio-image" src="{{this.covers.[404]}}"/>
-                            
-                        </figure>
-                    </div>
-                    {{/each}}
-                </script>
-              </div>
-            </a>  
+                </div>
+                {{/each}}
+            </script>
 
               <!-- start : works-item -->
               <div class="works-item works-item-one-third zoom ui web">
