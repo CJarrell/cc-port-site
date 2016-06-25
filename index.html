@@ -51,6 +51,8 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
 
+<!-- Instafeed JS Resources -->
+  <script src='javascripts/custom/jquery.cloudinary.js' type='text/javascript'></script>
 </head>
 
 <body>
@@ -149,50 +151,7 @@
   </header>
 
 
-  <!-- sub navigation panel : starts -->
-  <section class="sub-nav-wrap fullheight dark-bg white font2">
-            <div class="valign">
-
-
-              <!-- sub navigation section -->
-              <ul class="sub-nav sub-nav-intro">
-                <li><a class="ajax-link" href="index01.html">masonry</a></li>
-                <li><a class="ajax-link" href="index05.html">agency</a></li>
-                <li><a class="ajax-link" href="index02.html">fashion</a></li>
-                <li><a class="ajax-link" href="index07.html">photography</a></li>
-                <li><a class="ajax-link" href="index06.html">personal</a></li>
-                <li><a class="ajax-link" href="index04.html">fullscreen</a></li>
-                <li><a class="ajax-link" href="index03.html">bg video</a></li>
-              </ul>
-
-              <!-- sub navigation section -->
-              <ul class="sub-nav sub-nav-works">
-                <li><a class="ajax-link" href="works.html">masonry / random</a></li>
-                <li><a class="ajax-link" href="works02.html">masonry / 3 col</a></li>
-                <li><a class="ajax-link" href="works03.html">masonry / 2 col</a></li>
-                <li><a class="ajax-link" href="works04.html">masonry / 4 col</a></li>
-                <li><a class="ajax-link" href="works05.html">masonry / spaced</a></li>
-                <li><a class="ajax-link" href="works09.html">random spaced</a></li>
-                <li><a class="ajax-link" href="works06.html">square grid</a></li>
-                <li><a class="ajax-link" href="works07.html">dual column</a></li>
-                <li><a class="ajax-link" href="works08.html">single column</a></li>
-                <li><a class="ajax-link" href="project01.html">project view</a></li>
-              </ul>
-
-              <!-- sub navigation section -->
-              <ul class="sub-nav sub-nav-pages">
-                <li><a class="ajax-link" href="about.html">about</a></li>
-                <li><a class="ajax-link" href="pricing.html">pricing</a></li>
-                <li><a class="ajax-link" href="news.html">news listing</a></li>
-                <li><a class="ajax-link" href="post.html">news post</a></li>
-                <li><a class="ajax-link" href="elements.html">ui elements</a></li>
-                <li><a class="ajax-link" href="contact.html">contact</a></li>
-              </ul>
-
-            </div>
-  </section>
-  <!-- sub navigation panel : ends -->
-
+ 
 
   <section class="sticky-sidebar white-bg fullheight text-center">
       <div class="valign">
@@ -237,201 +196,153 @@
 </section>
 <!-- works filter panel :ends -->
 
-          <div id="works-container" class="works-container works-masonry-container clearfix white-bg">
-            <script id="portfolio-template" type="text/x-handlebars-template">
-                {{#each projects}}
-                <div class="works-item zoom ui web">
-                    <figure class="portfolio-cover works-item-inner" title="{{this.name}}">
-                       
-                        <img alt="Behance Project Image" title="" class="img-responsive portfolio-image" src="{{this.covers.[404]}}"/>
-                        <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/01.jpg">
-                            <h2 class="portfolio-title color font2">{{this.name}}</h2>
-                            <div class="portfolio-fields works-item-inner">
-                                <ul class="field-list">
-                                    {{#each this.fields}}
-                                    <li class="field-item">
-                                        <p><span class="dark font4">{{this}}</span></p>
-                                    </li>
-                                    {{/each}}
-                                </ul>
-                            </div>
-                        </a>
-                    </figure>
-                    
-                </div>
-                {{/each}}
-            </script>  
 
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third zoom ui web">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/01.jpg"/>
-                      <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/01.jpg">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Images</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
+            
+            <div id="works-container" class="works-container works-masonry-container clearfix white-bg">
+            
+              <div id="behance-works-container">
+                <script id="behance-portfolio-template" type="text/x-handlebars-template">
+                    {{#each projects}}
+                    <div class="works-item zoom ui web">
+                        <figure class="portfolio-cover works-item-inner" title="{{this.name}}">
+                           
+                            <img alt="Behance Project Image" title="" class="img-responsive portfolio-image" src="{{this.covers.[404]}}"/>
+                            <a  data-gall="portfolio-gallery" href="{{this.covers.[404]}}">
+                                <h2 class="portfolio-title color font2">{{this.name}}</h2>
+                                <div class="portfolio-fields works-item-inner">
+                                    <ul class="field-list">
+                                        {{#each this.fields}}
+                                        <li class="field-item">
+                                            <p><span class="dark font4">{{this}}</span></p>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </a>
+                        </figure>
+                        
+                    </div>
+                    {{/each}}
+                </script>
               </div>
-              <!-- end : works-item -->
-
-
-
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third info logos ui">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/02.jpg"/>
-                      <a class="ajax-link" href="project01.html">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Project Info</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third zoom branding graphics">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/03.jpg"/>
-                      <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/03.jpg">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Gallery</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-          <!-- start : works-item -->
-              <div class="works-item works-item-one-third info web graphics">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/04.jpg"/>
-                      <a  class="venobox" data-type="vimeo" href="http://vimeo.com/75976293">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Video</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-
-
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third zoom branding">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/05.jpg"/>
-                      <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/05.jpg">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Gallery</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-
-
-
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third info logos">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/07.jpg"/>
-                      <a class="ajax-link" href="project01.html">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Project Info</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-
-
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third zoom logos ui">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/08.jpg"/>
-                      <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/08.jpg">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Images</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-
-
-              <!-- start : works-item -->
-              <div class="works-item works-item-one-third info web">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/06.jpg"/>
-                      <a class="ajax-link" href="project01.html">
-                          <div class="works-item-inner">
-                            <h3 class="color font2">Project Info</h3>
-                            <p><span class="dark font4">Work Category</span></p>
-                          </div>
-                      </a>
-              </div>
-              <!-- end : works-item -->
-
-
 
 
                <!-- start : works-item -->
-              <div class="works-item works-item-one-third zoom logos graphics">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/09.jpg"/>
-                      <a class="venobox" data-type="vimeo" href="http://vimeo.com/75976293">
+              <div class="works-item">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_scale,h_316/v1466870895/RED-RED-WINE-2742_sq8azr.jpg"/>
+                      <a  class="venobox" data-gall="portfolio-gallery" href="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466870895/RED-RED-WINE-2742_sq8azr.jpg">
                           <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Video</h3>
-                            <p><span class="dark font4">Work Category</span></p>
+                            <h2 class="color font2">Photography</h3>
                           </div>
                       </a>
               </div>
               <!-- end : works-item -->
-
-
 
               <!-- start : works-item -->
-              <div class="works-item works-item-one-third info branding">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/10.jpg"/>
-                      <a class="ajax-link" href="project01.html">
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466871252/SURREAL-LIGHT-2284_dd0lut.jpg"/>
+                      <a  class="venobox" data-gall="portfolio-gallery" href="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466871252/SURREAL-LIGHT-2284_dd0lut.jpg">
                           <div class="works-item-inner">
-                            <h3 class="color font2">Project Info</h3>
-                            <p><span class="dark font4">Work Category</span></p>
+                            <h2 class="color font2">Photography</h3>
                           </div>
                       </a>
               </div>
               <!-- end : works-item -->
 
+              <!-- start : works-item -->
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_scale,h_316/v1466871251/LAWNMOWER_MAN-5420_ttl28k.jpg"/>
+                      <a  class="venobox" data-gall="portfolio-gallery" href="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466871251/LAWNMOWER_MAN-5420_ttl28k.jpg">
+                          <div class="works-item-inner">
+                            <h2 class="color font2">Photography</h3>
+                          </div>
+                      </a>
+              </div>
+              <!-- end : works-item -->
+
+              <!-- start : works-item -->
+              <div class="works-item logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466871586/TRACKS-TOWARD-TERMINUS-0958-1_gdwqbx.jpg"/>
+                      <a  class="venobox" data-gall="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466871586/TRACKS-TOWARD-TERMINUS-0958-1_gdwqbx.jpg">
+                          <div class="works-item-inner">
+                            <h2 class="color font2">Photography</h3>
+                          </div>
+                      </a>
+              </div>
+              <!-- end : works-item -->
+
+              <!-- start : works-item -->
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466871606/SELF_PORTRAIT_V3-1_dlk2pu.jpg"/>
+                      <a  class="venobox" data-gall="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466871606/SELF_PORTRAIT_V3-1_dlk2pu.jpg">
+                          <div class="works-item-inner">
+                            <h2 class="color font2">Photography</h3>
+                          </div>
+                      </a>
+              </div>
+              <!-- end : works-item -->
 
                <!-- start : works-item -->
-              <div class="works-item works-item-one-third zoom web logos">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/11.jpg"/>
-                      <a  class="venobox" data-gall="portfolio-gallery" href="images/portfolio/11.jpg">
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466875465/BATMOBILE_vmd70x.jpg"/>
+                      <a  class="venobox" data-gall="portfolio-gallery" href="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466875465/BATMOBILE_vmd70x.jpg">
                           <div class="works-item-inner">
-                            <h3 class="color font2">Lightbox Gallery</h3>
-                            <p><span class="dark font4">Work Category</span></p>
+                            <h2 class="color font2">Photography</h3>
                           </div>
                       </a>
               </div>
               <!-- end : works-item -->
-
-
 
               <!-- start : works-item -->
-              <div class="works-item works-item-one-third info graphics">
-                      <img alt="" title="" class="img-responsive" src="images/portfolio/12.jpg"/>
-                      <a class="ajax-link" href="project01.html">
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466875444/THE_HOMIE_NIELS-5827_r8clbp.jpg"/>
+                      <a  class="venobox" data-gall="portfolio-gallery" href="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466875444/THE_HOMIE_NIELS-5827_r8clbp.jpg">
                           <div class="works-item-inner">
-                            <h3 class="color font2">Project Info</h3>
-                            <p><span class="dark font4">Work Category</span></p>
+                            <h2 class="color font2">Photography</h3>
                           </div>
                       </a>
               </div>
               <!-- end : works-item -->
 
-                  
+              <!-- start : works-item -->
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_scale,h_316/v1466873355/1397_Woodbine-20_iacbyb.jpg"/>
+                      <a  class="venobox" data-gall="portfolio-gallery" href="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466873355/1397_Woodbine-20_iacbyb.jpg">
+                          <div class="works-item-inner">
+                            <h2 class="color font2">Photography</h3>
+                          </div>
+                      </a>
+              </div>
+              <!-- end : works-item -->
 
+              <!-- start : works-item -->
+              <div class="works-item logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466873369/1397_Woodbine-11_zx7xt6.jpg"/>
+                      <a  class="venobox" data-gall="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466873369/1397_Woodbine-11_zx7xt6.jpg">
+                          <div class="works-item-inner">
+                            <h2 class="color font2">Photography</h3>
+                          </div>
+                      </a>
+              </div>
+              <!-- end : works-item -->
 
+              <!-- start : works-item -->
+              <div class="works-item zoom logos ui">
+                      <img alt="" title="" class="img-responsive" src="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_fit,h_316/v1466873364/1397_Woodbine-7_zfpptb.jpg"/>
+                      <a  class="venobox" data-gall="http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/v1466873364/1397_Woodbine-7_zfpptb.jpg">
+                          <div class="works-item-inner">
+                            <h2 class="color font2">Photography</h3>
+                          </div>
+                      </a>
+              </div>
+              <!-- end : works-item -->
+
+              
 
             </div>
-            <!-- end : works-container -->
+              <!-- end : works-container -->
+          
+            
 
 
 

@@ -296,7 +296,7 @@ function initMasonry() {
                     $container1.isotope({
                             // options
                             itemSelector: '.works-item',
-                            layoutMode: 'masonry',
+                            layoutMode: 'fitRows',
                             transitionDuration: '0.8s'
                      });
                         //forcing a perfect masonry layout after initial load

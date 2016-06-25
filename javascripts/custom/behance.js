@@ -1,4 +1,8 @@
 
+
+
+
+
 var apiKey = 'zH1WFwEgI3ZlJ5OYQMAqHRlt1UsyUMfv';
 var userID = 'colbyj';
 
@@ -10,11 +14,10 @@ $(function() {
  
     function setPortfolioTemplate() {
         var projectData = JSON.parse(sessionStorage.getItem('behanceProject')),
-            getTemplate = $('#portfolio-template').html(),
-            c = console.log(getTemplate), 
+            getTemplate = $('#behance-portfolio-template').html(),
             template    = Handlebars.compile(getTemplate),
             result      = template(projectData);
-        $('#works-container').html(result);
+        $('#behance-works-container').html(result);
     };
  
     if(sessionStorage.getItem('behanceProject')) {
@@ -27,3 +30,5 @@ $(function() {
         });
     };
 });
+
+
