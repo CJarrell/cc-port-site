@@ -43,6 +43,7 @@ there.
     display: inline-block;
   }
   .mobile-nav{
+    height: 500px;
     display: block;
   }
   .masthead, .sticky-sidebar, .share-panel, .featured-panel{

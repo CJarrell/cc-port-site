@@ -27,61 +27,61 @@ initMap();
 initContactForm();
 
 
-$('a.ajax-link').on('click', function() {
-    $('#ajax-content').animate({
-        opacity: 0
-    }, 0, function() {
-        // Animation complete.
-        //Shows Preloader
-        showPreloader();
-    });
+// $('a.ajax-link').on('click', function() {
+//     $('#ajax-content').animate({
+//         opacity: 0
+//     }, 0, function() {
+//         // Animation complete.
+//         //Shows Preloader
+//         showPreloader();
+//     });
 
-    var link = $(this).attr('href');
-    $.ajax({
-        type: 'POST',
-        url: $(this).attr('href'),
-        processData: true,
-        dataType: 'html',
-        success: function(data) {
-            //Ttile Change
-            document.title = $(data).filter('title').text();
+//     var link = $(this).attr('href');
+//     $.ajax({
+//         type: 'POST',
+//         url: $(this).attr('href'),
+//         processData: true,
+//         dataType: 'html',
+//         success: function(data) {
+//             //Ttile Change
+//             document.title = $(data).filter('title').text();
 
-            //Hash change
-            if (typeof history.pushState != 'undefined') history.pushState(data, 'Page', link);
-            var content_to_display = "#ajax-content";
-            var content_container = "#ajax-content";
-            //here both are same
-
-
-            var delay = 0;
-            setTimeout(function() {
-
-                $('#ajax-content').css('opacity', '0');
-                $('body').addClass('preloader-running');
-                $('#status, #preloader').show(1000);
-
-                setTimeout(function() {
-                    $('body').waitForImages({
-                        finished: function() {
-
-                            // loading ajax content
-                            $(content_container).html($(data).find(content_to_display).html());
-                            openPage();
-                        },
-                        waitForAll: true
-                    });
-
-                }, 1100);
-
-            }, delay);
+//             //Hash change
+//             if (typeof history.pushState != 'undefined') history.pushState(data, 'Page', link);
+//             var content_to_display = "#ajax-content";
+//             var content_container = "#ajax-content";
+//             //here both are same
 
 
+//             var delay = 0;
+//             setTimeout(function() {
 
-        }
-    });
+//                 $('#ajax-content').css('opacity', '0');
+//                 $('body').addClass('preloader-running');
+//                 $('#status, #preloader').show(1000);
 
-    return false;
-});
+//                 setTimeout(function() {
+//                     $('body').waitForImages({
+//                         finished: function() {
+
+//                             // loading ajax content
+//                             $(content_container).html($(data).find(content_to_display).html());
+//                             openPage();
+//                         },
+//                         waitForAll: true
+//                     });
+
+//                 }, 1100);
+
+//             }, delay);
+
+
+
+//         }
+//     });
+
+//     return false;
+// });
 
 
 
