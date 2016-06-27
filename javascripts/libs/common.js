@@ -2883,6 +2883,7 @@ function vimeoPlayerReady() {
   options = jQuery(window).data('okoptions');
 
   var iframe = jQuery('#okplayer')[0];
+  
   player = $f(iframe);
 
   // hide player until Vimeo hides controls...

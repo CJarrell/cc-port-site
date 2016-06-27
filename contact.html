@@ -57,6 +57,25 @@
     <div id="status"></div> 
   </div>
 
+  <!-- mobile only navigation : starts -->
+  <nav class="mobile-nav">
+      
+      <ul class="slimmenu">
+        
+        <li>
+          <a href="portfolio.html">
+            <h1 style="letter-spacing: 11px;; font-size: 1.25em; margin-left: 8px; border-bottom: thin solid #e0710e">COLBY JARRELL</h1>
+            <h1 class="font4" style="letter-spacing: 3.1px; font-size: 1.25em">CREATIVE CONSULTANT</h1>
+          </a>  
+        </li> 
+        <li>
+          <a class="main-nav-link" href="portfolio.html">portfolio</a>  
+        </li> 
+        <li><a class="ajax-link" href="#">contact</a></li>
+      </ul>
+  </nav>
+<!-- mobile only navigation : ends -->
+
 
 
   <a class="onscreen-trigger" href="#"><img alt="" title="" src="images/next.svg"/></a>
@@ -66,17 +85,18 @@
   <header class="masthead white-bg fullheight">
     <div class="valign">
       <div class="inner">
-          <a class="ajax-link block" href="index.html">
+          <a class="ajax-link block" href="portfolio.html">
             <h1 style="letter-spacing: 11px; margin-left: 8px; border-bottom: thin solid #e0710e">COLBY JARRELL</h1>
             <h1 style="letter-spacing: 3.1px">CREATIVE CONSULTANT</h1>
           </a>
-          <a class="ajax-link" href="index.html"><img alt="COLBYjCC LOGO SM" title="COLBYjCC LOGO SM" class="logo" src="images/logo.png"/></a>
+          <a class="ajax-link" href="portfolio.html"><img alt="COLBYjCC LOGO SM" title="COLBYjCC LOGO SM" class="logo" src="images/logo.png"/></a>
           <nav class="mastnav font2">
             <ul>
-              <li><a class="ajax-link" href="index.html">portfolio</a></li>
-              <li><a class="ajax-link" href="about.html">about</a></li>
+              <!-- <li><a class="ajax-link" href="intro.html">intro</a></li> -->
+              <li><a class="ajax-link" href="portfolio.html">portfolio</a></li>
+              <!-- <li><a class="ajax-link" href="about.html">about</a></li> -->
               <!-- <li><a class="ajax-link" href="pricing.html">pricing</a></li> -->
-              <li><a class="ajax-link" href="contact.html">contact</a></li>
+              <li><a class="main-nav-link" href="#">contact</a></li>
               <!-- <li><a class="ajax-link" href="project01.html">project</a></li> -->
             </ul>
           </nav>
@@ -121,53 +141,23 @@
 
     <section class="sub-wrap add-top-half add-bottom-half">
         <div class="container" style="padding: 25px">
+          
           <div class="row">
-            <article class="col-md-12">
-                <div id="googlemaps" class="halfheight">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106135.12036923434!2d-84.49081492425438!3d33.76783577729769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045d6993098d%3A0x66fede2f990b630b!2sAtlanta%2C+GA!5e0!3m2!1sen!2sus!4v1466973356746" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </article>
-          </div>
-          <div class="row">
-            <article class="col-md-12 text-left contact-box add-top-half">
+            <article class="col-md-12 text-center contact-box add-top-half">
                 <h1 class="font5 dark">COLBY JARRELL<span class="orange">|</span><a class="font5 grey" href="mailto:COLBY.JARRELL@icloud.com">COLBY.JARRELL@icloud.com</a><span class="orange">|</span><a class="font5 grey" href="tel:269-420-6106">269.420.6106</a></h1>
                 
                 <div class="liner color-bg"></div>
-                <div class="form-wrapper row">
-                  <div id="contact-form-wrap">
-                      <div class="contact-item pad-common ">
-                        <div class="alert alert-error error color-bg " id="fname">
-                          <p class="white">Name must not be empty</p>
-                        </div>
-                        <div class="alert alert-error  error color-bg" id="fmail">
-                          <p class="white">Please provide a valid email</p>
-                        </div>
-                        <div class="alert alert-error  error color-bg" id="fmsg">
-                          <p class="white">Message should not be empty</p>
-                        </div>
-                        <form name="myform" id="contactForm" action="sendcontact.php" enctype="multipart/form-data" method="post"> 
-                          <article>
-                            <input type="text" placeholder="Your Name" id="name" name="name" size="100" class="border-form font2">
-                          </article>
-                          <article>
-                           <input type="text" placeholder="Valid email ID" name="email" id="email" size="30" class="border-form font2">
-                          </article>
-                          <article>
-                            <textarea placeholder="Your Message" name="message" cols="40" rows="4" id="msg" class="border-form font2"></textarea>
-                            <div class="add-top-quarter  text-center">
-                              <button class="btn btn-otto btn-otto-color" id="submit" name="submit" type="submit">Send Message</button>
-                            </div>
-                          </article>
-                        </form>
-                      </div>
-                    </div>
-
-                  </div>
-                <!-- form-wrapper:ends -->
+                
+                
 
 
 
             </article>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                  <iframe src="https://docs.google.com/forms/d/1hyXZXRNFsXPiWcr3UcchKxPqTy0uehEmyLW2XTT_prE/viewform?embedded=true" width="986" height="1000" frameborder="1" marginheight="0" marginwidth="0">Loading...</iframe>
+              </div>
+            </div>
 
 
           </div>
@@ -331,7 +321,7 @@
   
   <script src="javascripts/libs/common.js"></script>
   <script src="javascripts/libs/bootstrap.min.js"></script>
-  <script src="javascripts/custom/form-validation.js" ></script> 
+   
   <script src="javascripts/custom/main.js"></script>
 
 

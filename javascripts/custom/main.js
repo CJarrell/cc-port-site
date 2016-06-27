@@ -9,7 +9,7 @@
 
 
 $(function ($) {
-  
+
 
 preloaderInit();
 initCalc();
@@ -20,11 +20,11 @@ initLightbox();
 initMobileNav();
 initParallax();
 initBackstretch();
-initBGVimeo();
+// initBGVimeo();
 initOwlCarousel();
 initElements();
 initMap();
-initContactForm();
+// initContactForm();
 
 
 // $('a.ajax-link').on('click', function() {
@@ -132,7 +132,7 @@ function openPage() {
     initMobileNav();
     initParallax();
     initBackstretch();
-    initBGVimeo();
+    // initBGVimeo();
     initOwlCarousel();
     initElements();
     initMap();
@@ -477,38 +477,43 @@ function initBackstretch() {
 // initBackstretch: ends
 
 
-function initBGVimeo() {
-        $(document).ready(function() {
-            $('#okplayer, #okplayer-mask').remove();
-             if ( $( "#bg-video-flag" ).length ) {
-                        $('body').add('#okplayer');
-                        $('body').add('#okplayer-mask');
-                      //shows BG video only if .intro03 div is present
-                        if( !device.tablet() && !device.mobile() ) {
-                        /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
-                        $("body").okvideo({ source: '172334024', //set your video source here
-                                        autoplay:true,
-                                        loop: true,
-                                        highdef:true,
-                                        hd:true, 
-                                        adproof: true,
-                                        volume:50 // control the video volume by setting a value from 0 to 99
-                                     });
-                                    
-                        } else {
-                            
-                            /* displays a poster image if mobile device is detected*/ 
-                            $('body, .mastwrap').addClass('poster-img');
-                            
-                        }
-                        // inner if loop ends
-                }
-                // outer if loop ends
+// function initBGVimeo() {
+//     $(document).ready(function() {
+//         $('#okplayer, #okplayer-mask').remove();
+//         if ( $( "#bg-video-flag" ).length ) {
+//             $('body').add('#okplayer');
+//             $('body').add('#okplayer-mask');
+//                   //shows BG video only if .intro03 div is present
+//             if( !device.tablet() && !device.mobile() ) {
+//                     /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
+//                 $("body").okvideo({ source: '172334024', //set your video source here
+//                     autoplay:true,
+//                     volume:10, // control the video volume by setting a value from 0 to 99
+//                     loop:false,
+//                     hd:true, 
+//                     onFinished: function(){
+//                         console.log("hey")
+//                     }
+//                 });
 
-        });
-        // ready: ends
-}
-// initBGVimeo: ends
+                                
+//                 } else {
+                        
+//                 /* displays a poster image if mobile device is detected*/ 
+
+//                     window.location.replace("portfolio.html");
+                        
+//                 }
+//                 // inner if loop ends
+//             }
+//             // outer if loop ends
+            
+//         });
+//         // ready: ends
+// }
+
+  
+      
 
 
 function initOwlCarousel() {
@@ -691,79 +696,79 @@ function initMap() {
 }
 // initMap: ends
 
-function initContactForm() {
-        $(document).ready(function() {
-            //CONTACT FORM VALIDATION
+// function initContactForm() {
+//         $(document).ready(function() {
+//             //CONTACT FORM VALIDATION
 
-            // hide messages 
-            $(".error").hide();
-            $(".success").hide();
+//             // hide messages 
+//             $(".error").hide();
+//             $(".success").hide();
 
-            $('#contactForm input').on('click', function() {
-                $(".error").fadeOut();
-            });
+//             $('#contactForm input').on('click', function() {
+//                 $(".error").fadeOut();
+//             });
 
-            // on submit...
-            $("#contactForm #submit").on('click', function() {
-                $(".error").hide();
+//             // on submit...
+//             $("#contactForm #submit").on('click', function() {
+//                 $(".error").hide();
 
-                //required:
+//                 //required:
 
-                //name
-                var name = $("input#name").val();
-                if (name === "") {
-                    //$("#error").fadeIn().text("Name required.");
-                    $('#fname').fadeIn('slow');
-                    $("input#name").focus();
-                    return false;
-                }
+//                 //name
+//                 var name = $("input#name").val();
+//                 if (name === "") {
+//                     //$("#error").fadeIn().text("Name required.");
+//                     $('#fname').fadeIn('slow');
+//                     $("input#name").focus();
+//                     return false;
+//                 }
 
-                //email (check if entered anything)
-                var email = $("input#email").val();
-                //email (check if entered anything)
-                if (email === "") {
-                    //$("#error").fadeIn().text("Email required");
-                    $('#fmail').fadeIn('slow');
-                    $("input#email").focus();
-                    return false;
-                }
+//                 //email (check if entered anything)
+//                 var email = $("input#email").val();
+//                 //email (check if entered anything)
+//                 if (email === "") {
+//                     //$("#error").fadeIn().text("Email required");
+//                     $('#fmail').fadeIn('slow');
+//                     $("input#email").focus();
+//                     return false;
+//                 }
 
-                //email (check if email entered is valid)
+//                 //email (check if email entered is valid)
 
-                if (email !== "") { // If something was entered
-                    if (!isValidEmailAddress(email)) {
-                        $('#fmail').fadeIn('slow'); //error message
-                        $("input#email").focus(); //focus on email field
-                        return false;
-                    }
-                }
+//                 if (email !== "") { // If something was entered
+//                     if (!isValidEmailAddress(email)) {
+//                         $('#fmail').fadeIn('slow'); //error message
+//                         $("input#email").focus(); //focus on email field
+//                         return false;
+//                     }
+//                 }
 
-                function isValidEmailAddress(emailAddress) {
-                    var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
-                    return pattern.test(emailAddress);
-                }
-
-
-
-
-                // comments
-                var comments = $("#msg").val();
-
-                if (comments === "") {
-                    //$("#error").fadeIn().text("Email required");
-                    $('#fmsg').fadeIn('slow');
-                    $("input#msg").focus();
-                    return false;
-                }
-            });
+//                 function isValidEmailAddress(emailAddress) {
+//                     var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
+//                     return pattern.test(emailAddress);
+//                 }
 
 
 
-            return false;
-        });
-        // ready: ends
-}
-// initContactForm: ends
+
+//                 // comments
+//                 var comments = $("#msg").val();
+
+//                 if (comments === "") {
+//                     //$("#error").fadeIn().text("Email required");
+//                     $('#fmsg').fadeIn('slow');
+//                     $("input#msg").focus();
+//                     return false;
+//                 }
+//             });
+
+
+
+//             return false;
+//         });
+//         // ready: ends
+// }
+// // initContactForm: ends
 
 
 });
