@@ -335,6 +335,65 @@ header.masthead .logo{
     margin-bottom: 5px;
     text-transform: uppercase;
 }
+.wrapper-bv {
+   position: absolute;
+    width: 500%;
+    height: 100%;
+    z-index: 0;
+}
+.screen-bv {
+    position: relative;
+    height: 100%; 
+    width: 20%; /*  NOTE:numVideos/100%  */
+    float: left;
+    overflow: hidden;
+}
+.big-image-bv {
+    min-width: 100%;
+    min-height: 100%; 
+    height: auto;
+    width: auto; 
+}
+.video-title-bv {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    opacity: .5;
+    margin: 0;
+    padding: 0;
+    line-height: .65;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+.nav-bv {
+    position:absolute; 
+    right: 5%; 
+    top: 45%; 
+    padding: 20px; 
+    background: #000; 
+    border-radius: 40px; 
+    opacity: .4; 
+    cursor: pointer;}
+    nav: hover {
+    opacity: .6;
+}
+
+.next-icon-bv {
+    display: block;
+    border-top: solid 2px #fff; 
+    border-right: solid 2px #fff; 
+    width: 20px; 
+    height: 20px;
+    position: relative;
+    left: -5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #fff;
+    text-decoration: none;
+}
 .cd-panel-content{
   margin-top: 50px;
 }

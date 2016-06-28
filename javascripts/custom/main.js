@@ -20,7 +20,7 @@ initLightbox();
 initMobileNav();
 initParallax();
 initBackstretch();
-// initBGVimeo();
+initBGVimeo();
 initOwlCarousel();
 initElements();
 initMap();
@@ -132,7 +132,8 @@ function openPage() {
     initMobileNav();
     initParallax();
     initBackstretch();
-    // initBGVimeo();
+
+    initBGVimeo();
     initOwlCarousel();
     initElements();
     initMap();
@@ -477,40 +478,39 @@ function initBackstretch() {
 // initBackstretch: ends
 
 
-// function initBGVimeo() {
-//     $(document).ready(function() {
-//         $('#okplayer, #okplayer-mask').remove();
-//         if ( $( "#bg-video-flag" ).length ) {
-//             $('body').add('#okplayer');
-//             $('body').add('#okplayer-mask');
-//                   //shows BG video only if .intro03 div is present
-//             if( !device.tablet() && !device.mobile() ) {
-//                     /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
-//                 $("body").okvideo({ source: '172334024', //set your video source here
-//                     autoplay:true,
-//                     volume:10, // control the video volume by setting a value from 0 to 99
-//                     loop:false,
-//                     hd:true, 
-//                     onFinished: function(){
-//                         console.log("hey")
-//                     }
-//                 });
+function initBGVimeo() {
+    $(document).ready(function() {
+        $('#okplayer, #okplayer-mask').remove();
+        if ( $( "#bg-video-flag" ).length ) {
+            $('body').add('#okplayer');
+            $('body').add('#okplayer-mask');
+
+                  //shows BG video only if .intro03 div is present
+            if( !device.tablet() && !device.mobile() ) {
+                    /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
+                $("body").okvideo({ source: '172334024', //set your video source here
+                    autoplay:true,
+                    volume:10, // control the video volume by setting a value from 0 to 99
+                    loop:0,
+                    hd:true,
+                    onFinished: function(){ window.location.replace("portfolio.html"); }
+                });
 
                                 
-//                 } else {
+            } else {
                         
-//                 /* displays a poster image if mobile device is detected*/ 
+            /* displays a poster image if mobile device is detected*/ 
 
-//                     window.location.replace("portfolio.html");
+                window.location.replace("portfolio.html");
                         
-//                 }
-//                 // inner if loop ends
-//             }
-//             // outer if loop ends
+            }
+            // inner if loop ends
+        }
+        // outer if loop ends
             
-//         });
-//         // ready: ends
-// }
+    });
+    // ready: ends
+}
 
   
       

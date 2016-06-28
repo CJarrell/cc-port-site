@@ -2992,7 +2992,7 @@ OKEvents = {
       OKEvents.utils.isFunction(options.onPause) && options.onPause();
     },
     onFinish: function(){
-      OKEvents.utils.isFunction(options.onFinish) && options.onFinish();
+      OKEvents.utils.isFunction(options.onFinished) && options.onFinished();
     }
   },
   utils: {
