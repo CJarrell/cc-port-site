@@ -14,6 +14,7 @@ there.
   .container{
     max-width: 700px;
   }
+
 }
 
 /* Larger than desktop */
@@ -27,6 +28,7 @@ there.
   .img-responsive{
     display: inline-block;
   }
+
 }
 
 /* Larger than tablet */
@@ -87,6 +89,7 @@ there.
   .caption h3, .services-item{
     margin-bottom: 25px;
   }
+ 
 
 }
 
@@ -97,6 +100,7 @@ there.
     padding-left: 50px;
     padding-right: 50px;
   }
+ 
 }
 
 
@@ -107,6 +111,7 @@ there.
     padding-left: 50px;
     padding-right: 50px;
   }
+  
 }
 
 
@@ -117,6 +122,8 @@ there.
     padding-left: 50px;
     padding-right: 50px;
   }
+
+
 }
 
 /*iPhone Landscape Mode and Mediium Smart Phones*/
@@ -172,6 +179,7 @@ there.
     font-size: 14px;
     line-height: 21px;
   }
+  
 }
 
 /*iPhone 6Plus Portrait Mode*/
@@ -180,6 +188,9 @@ there.
     width: 374px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .hide-on-desktop{
+    display: inline;
   }
 }
 
@@ -190,6 +201,9 @@ there.
     padding-left: 20px;
     padding-right: 20px;
   }
+  .hide-on-desktop{
+    display: inline;
+  }
 }
 
 /*iPhone 5S, 5, 4S & 4 Portrait Mode and Very Small Mobile Phones*/
@@ -198,5 +212,8 @@ there.
     width: 300px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .hide-on-desktop{
+    display: inline;
   }
 }

@@ -754,6 +754,9 @@ nav.mastnav a:focus{
 .works-filter li:last-child:after{
     display: none;
 }
+.hide-on-desktop{
+    display: none;
+}
 
  .works-item a{
        	border: solid 6px;
