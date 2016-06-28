@@ -2720,7 +2720,7 @@ var player, OKEvents, options;
       target.css({position: 'relative'});
 
       var zIndex = base.options.controls === 3 ? -999 : "auto";
-      var mask = '<div id="okplayer-mask" style="position:' + position + ';left:0;top:0;overflow:hidden;z-index:-998;height:100%;width:100%;"></div>';
+      var mask = '<div id="okplayer-mask" style="position:' + position + ';left:0;top:0;overflow:hidden;z-index:-998;height:100%;width:100%;background-size:cover;"></div>';
 
       if (OKEvents.utils.isMobile()) {
         target.append('<div id="okplayer" style="position:' + position + ';left:0;top:0;overflow:hidden;z-index:' + zIndex + ';height:100%;width:100%;"></div>');
@@ -2755,8 +2755,8 @@ var player, OKEvents, options;
     base.setOptions = function () {
       // exchange 'true' for '1' and 'false' for 3
       for (var key in this.options){
-        if (this.options[key] === true) this.options[key] = 1;
-        if (this.options[key] === false) this.options[key] = 3;
+        if (this.options[key] === true) this.options[key] = 3;
+        if (this.options[key] === false) this.options[key] = 1;
       }
 
       if (base.options.playlist.list === null) {
@@ -2779,7 +2779,7 @@ var player, OKEvents, options;
     // load the vimeo api by replacing the div with an iframe and loading js
     base.loadVimeoAPI = function() {
       $('#okplayer').replaceWith(function() {
-        return '<iframe src="http://player.vimeo.com/video/' + base.options.video.id + '?api=1&title=0&byline=0&portrait=0&playbar=0&loop=' + base.options.loop + '&autoplay=' + (base.options.autoplay === 1 ? 1 : 0) + '&player_id=okplayer" frameborder="0" style="' + $(this).attr('style') + 'visibility:hidden;background-color:white;" id="' + $(this).attr('id') + '"></iframe>';
+        return '<iframe src="http://player.vimeo.com/video/' + base.options.video.id + '?api=1&title=0&byline=0&portrait=0&playbar=0&loop=' + base.options.loop + '&autoplay=' + (base.options.autoplay === 1 ? 1 : 0) + '&player_id=okplayer" frameborder="0" style="' + $(this).attr('style') + 'visibility:hidden !important;background-color:white;" id="' + $(this).attr('id') + '"></iframe>';
       });
 
 			// if necessary, debug with the most recent version of froogaloop
@@ -2918,7 +2918,7 @@ function onYouTubePlayerAPIReady() {
       'autoplay': 0, //options.autoplay,
       'disablekb': options.keyControls,
       'cc_load_policy': options.captions,
-      'controls': options.controls,
+      'controls': false,
       'enablejsapi': 1,
       'fs': 0,
       'modestbranding': 1,

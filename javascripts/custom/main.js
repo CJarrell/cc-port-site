@@ -165,7 +165,8 @@ function initCalc() {
 function initUX() {
         $(document).ready(function() {
 
-           
+            
+        
             
             $("html,body").animate({scrollTop: 0}, 1000);
              //Displaying UI elements according to the availability of ajax loaded components

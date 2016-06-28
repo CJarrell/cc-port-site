@@ -1640,7 +1640,7 @@ fieldset h1 {
 }
 .poster-img{
 	background:url(../images/poster.jpg) center center no-repeat !important;
-  background-size: contain;
+  background-size: cover;
 }
 
 
