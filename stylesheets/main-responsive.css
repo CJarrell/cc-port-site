@@ -188,7 +188,9 @@ there.
     padding-right: 20px;
   }
   .hide-on-desktop{
-    display: inline;
+    margin-top: 50px;
+    display:block;
+    visibility: visible;
   }
 }
 
@@ -200,7 +202,9 @@ there.
     padding-right: 20px;
   }
   .hide-on-desktop{
-    display: inline;
+    margin-top: 50px;
+    display:block;
+    visibility: visible;
   }
 }
 
@@ -212,6 +216,8 @@ there.
     padding-right: 10px;
   }
   .hide-on-desktop{
-    display: inline;
+    margin-top: 50px;
+    display:block;
+    visibility: visible;
   }
 }

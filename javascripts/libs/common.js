@@ -2865,7 +2865,7 @@ var player, OKEvents, options;
     buffering: null,
     controls: false,
     autoplay: true,
-    annotations: true,
+    annotations: false,
     cued: null
   };
 
@@ -2922,7 +2922,7 @@ function onYouTubePlayerAPIReady() {
       'enablejsapi': 1,
       'fs': 0,
       'modestbranding': 1,
-      'iv_load_policy': options.annotations,
+      'iv_load_policy': false,
       'loop': options.loop,
       'showinfo': 0,
       'rel': 0,
