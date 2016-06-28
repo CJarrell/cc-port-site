@@ -192,6 +192,20 @@ there.
     display:block;
     visibility: visible;
   }
+  body{
+    font-size: 10px;
+  }
+
+  body{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 1.4em;
+  }  
+  h2{
+    font-size: 1.2em;
+  }
 }
 
 /*iPhone 6 Portrait Mode*/
@@ -205,6 +219,20 @@ there.
     margin-top: 50px;
     display:block;
     visibility: visible;
+  }
+  body{
+    font-size: 10px;
+  }
+
+  body{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 1.4em;
+  }  
+  h2{
+    font-size: 1.2em;
   }
 }
 
@@ -220,4 +248,19 @@ there.
     display:block;
     visibility: visible;
   }
+
+  body{
+    font-size: 10px;
+  }
+
+  body{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 1.4em;
+  }  
+  h2{
+    font-size: 1.2em;
+  } 
 }
