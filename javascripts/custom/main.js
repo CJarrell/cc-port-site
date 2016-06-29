@@ -291,51 +291,6 @@ function initNav() {
 // initNav: ends
 
 
-function initMasonry() {
-        $(document).ready(function() {
-            //ISOTOPE INIT
-                    var $container1 = $('.works-container');
-                    $container1.isotope({
-                            // options
-                            itemSelector: '.works-item',
-                            layoutMode: 'fitRows',
-                            transitionDuration: '0.8s'
-                     });
-                        //forcing a perfect masonry layout after initial load
-                        setTimeout(function() {
-                        $container1.isotope('layout');
-                        }, 100);
-                        $container1.isotope('bindResize');
-                        //Isotope ReLayout on Page Load event.
-                        $(window).load(function() {
-                            $container1.isotope('layout');
-                        });
-                        //Isotope ReLayout on Window Resize event.
-                        $(window).on('resize', function() {
-                            $container1.isotope('layout');
-                        });
-                        //Isotope ReLayout on device orientation changes
-                        window.addEventListener("orientationchange", function() {
-                            $container1.isotope('layout');
-                        }, false);
-
-            $('.works-filter li a').on('click', function(event) {
-                event.preventDefault();
-                $('.works-filter li a').removeClass('active');
-                $(this).addClass('active');
-                var selector = $(this).attr('data-filter');
-                $('.works-container').isotope({
-                    filter: selector
-                });
-                setTimeout(function() {
-                    $container1.isotope('layout');
-                }, 800);
-            });
-
-        });
-        // ready: ends
-}
-// initMasonry: ends
 
 
 
@@ -771,6 +726,73 @@ function initMap() {
 // }
 // // initContactForm: ends
 
+function initMasonry() {
+        $(document).ready(function() {
+            //ISOTOPE INIT
+                    var $itemContainer = $('.works-item');
+                    var $container1 = $('.works-container');
+                        
+
+                    var isVisible = $itemContainer.is(':visible');
+
+                    if( isVisible == true) {
+                        $container1.isotope({
+                        // options
+                        itemSelector: '.works-item',
+                        isFit: true,
+                        rowHeight: 400,
+                        layoutMode: 'fitRows',
+                        transitionDuration: '0.8s',
+
+                        });
+                    } 
+                    
+                    // $container1.imagesLoaded( function(){
+                    
+                    // })
+                   
+                    // $container1.packery({
+                    //       // options
+                    //       itemSelector: '.works-item',
+                          
+                    //       columnWidth: '.grid-sizr',
+                    //       percentPosition: true
+                    //     });
+                    //forcing a perfect masonry layout after initial load
+                    setTimeout(function() {
+                    $container1.isotope('layout');
+                    }, 100);
+                    $container1.isotope('bindResize');
+                    //Isotope ReLayout on Page Load event.
+                    $(window).load(function() {
+                        $container1.isotope('layout');
+                    });
+                    //Isotope ReLayout on Window Resize event.
+                    $(window).on('resize', function() {
+                        $container1.isotope('layout');
+                    });
+                    //Isotope ReLayout on device orientation changes
+                    window.addEventListener("orientationchange", function() {
+                        $container1.isotope('layout');
+                    }, false);
+
+            $('.works-filter li a').on('click', function(event) {
+                event.preventDefault();
+                $('.works-filter li a').removeClass('active');
+                $(this).addClass('active');
+                var selector = $(this).attr('data-filter');
+                $('.works-container').isotope({
+                    filter: selector
+                });
+                setTimeout(function() {
+                    $container1.isotope('layout');
+                }, 800);
+            });
+
+        });
+        // ready: ends
+}
+// initMasonry: ends
 
 });
 // $(function ($)  : ends
