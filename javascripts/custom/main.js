@@ -172,15 +172,14 @@ function initUX() {
              //Displaying UI elements according to the availability of ajax loaded components
             $('.works-filter-trigger').fadeOut();
             if ( $( "#works-filter-panel" ).length ) {
-                      $('.works-filter-trigger').fadeIn(); //shows filter button only if filters are present
-                    }
+                $('.works-filter-trigger').fadeIn(); //shows filter button only if filters are present
+            }
             $('.fullscreen-toggle').fadeIn();
             if ( $( ".works-masonry-container" ).length ) {
-                      $('.fullscreen-toggle').fadeOut(); //shows fullscreen button only if masonry portfolio is present
-                    }
+                $('.fullscreen-toggle').fadeOut(); //shows fullscreen button only if masonry portfolio is present
+            }
 
-            $('.works-filter-panel').slideUp();
-            $('.works-filter-panel').removeClass('is-visible');
+            
 
 
             //MISC ACTIONS
@@ -257,6 +256,7 @@ function initUX() {
                 event.preventDefault();
                 $('.works-filter-panel').slideDown();
                 $('.works-filter-panel').addClass('is-visible');
+                
             });
         });
         // ready: ends
@@ -739,10 +739,13 @@ function initMasonry() {
                         $container1.isotope({
                         // options
                         itemSelector: '.works-item',
+
                         isFit: true,
                         rowHeight: 400,
                         layoutMode: 'fitRows',
+                        originLeft: false,
                         transitionDuration: '0.8s',
+
 
                         });
                     } 
