@@ -9,12 +9,11 @@ body{
 }
 /* ------- overlay: change here background color and opacity ----- */
 .vbox-overlay{
-    background: rgba(255,255,255,1); 
-    width: auto;
+    background: rgba(255,255,255,.9); 
+    width: 100%;
     height: auto;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 9999;
     overflow: hidden;
     opacity: 0;
