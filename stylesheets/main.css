@@ -848,8 +848,9 @@ nav.mastnav a:focus{
 	display: none !important;
 }
 .works-masonry-container{
-  width: 110%;
+  width: 100%;
   padding: 0;
+  padding-right: 1px;
   margin:0 auto;
 }
 .works-masonry-container .works-item-one-third {
@@ -899,7 +900,7 @@ nav.mastnav a:focus{
 }
 
 .works-item { 
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   height: auto;
   overflow: hidden;
  }

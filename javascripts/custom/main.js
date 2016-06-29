@@ -256,7 +256,7 @@ function initUX() {
                 event.preventDefault();
                 $('.works-filter-panel').slideDown();
                 $('.works-filter-panel').addClass('is-visible');
-                
+
             });
         });
         // ready: ends
@@ -739,8 +739,9 @@ function initMasonry() {
                         $container1.isotope({
                         // options
                         itemSelector: '.works-item',
-
-                        isFit: true,
+                        percentPosition: true,
+                        
+                        fitWidth: true,
                         rowHeight: 400,
                         layoutMode: 'fitRows',
                         originLeft: false,
