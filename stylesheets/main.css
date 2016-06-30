@@ -723,9 +723,6 @@ nav.mastnav a:focus{
 }
 
 /*PORTFOLIO*/
-.grid-sizer{
-  height:400px;
-}
 .works-filter-panel{
   display: none;
   width: 100%;
@@ -894,25 +891,25 @@ nav.mastnav a:focus{
   width: 64.6% !important;
 }
 .works-masonry-container .works-item-one-fourth-spaced{
-  margin: 1% !important;
+  
+  margin: 0 auto;
   padding: 0 !important;
   width: 23% !important;
 }
 
 .works-item { 
-  /*margin: 0 auto;*/
+  margin: 0 auto;
   height: auto;
   overflow: hidden;
  }
-/*.works-item { 
-  width: 15%; 
-}*/
-.works-item--width2 { 
-  width: auto; 
-}
-.works-item--width3 { 
-  width: auto; 
-}
+
+ /*for responsive works-item-container*/
+ .grid-sizr{
+  width: 25%;
+ }
+
+
+
 
     
 /* Portfolio Isotope Transitions */ 
@@ -1234,6 +1231,15 @@ nav.mastnav a:focus{
 } 
 
 /*CONTACT*/
+.contact-wrap{
+  background-image: url("http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_scale,w_1000/v1467256754/THEBEAM-_wssnmv.jpg");
+  background-repeat: no-repeat;
+  background-size:contain;
+
+}
+.contact-form-wrap{
+  top: 500px;
+}
 #googlemaps
 {
     width: 100%;

@@ -445,6 +445,7 @@ function initBGVimeo() {
             if( !device.tablet() && !device.mobile() ) {
                     /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
                 $("body").okvideo({ source: '172334024', //set your video source here
+
                     autoplay:true,
                     volume:10, // control the video volume by setting a value from 0 to 99
                     loop:0,
@@ -737,18 +738,16 @@ function initMasonry() {
 
                     if( isVisible == true) {
                         $container1.isotope({
-                        // options
-                        itemSelector: '.works-item',
-                        percentPosition: true,
-                        
-                        fitWidth: true,
-                        rowHeight: 400,
-                        layoutMode: 'fitRows',
-                        originLeft: false,
-                        transitionDuration: '0.8s',
+                            // options
+                            itemSelector: '.works-item',
+                            percentPosition: true,
+                            fitWidth: true,
 
-
+                            rowHeight: '15',
+                            layoutMode: 'fitRows',
+                            transitionDuration: '0.8s',
                         });
+
                     } 
                     
                     // $container1.imagesLoaded( function(){
