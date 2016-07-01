@@ -22,6 +22,9 @@
 .about-bg{
 	background-image: url('../images/bg/15.jpg');
 }
+.portfolio-bg{
+	background-color: #fff;
+}
 .promo{
 	background-image: url('../images/bg/12.jpg');
 }

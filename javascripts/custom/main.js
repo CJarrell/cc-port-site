@@ -739,11 +739,15 @@ function initMasonry() {
                     if( isVisible == true) {
                         $container1.isotope({
                             // options
+                            
                             itemSelector: '.works-item',
                             percentPosition: true,
                             fitWidth: true,
+                            rowHeight: 400,
+                            isFit: true,
 
-                            rowHeight: '15',
+                            columnWidth: '.grid-sizr',
+                            // gutter: '.gutter-sizr',
                             layoutMode: 'fitRows',
                             transitionDuration: '0.8s',
                         });

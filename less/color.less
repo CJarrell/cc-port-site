@@ -2,9 +2,11 @@
 @white:#FFFFFF;
 @silver:#f1f1f1;
 @grey:#CCCCCC;
-@dark:#292929;
+@dark:#093048;
 @black:#121212;
 @orange:#e0710e;
+@blue:#2B9DE4;
+@bluewhite:#F9F9F9 ;
 
 
 .color{
@@ -28,6 +30,12 @@
 .orange{
 	color:@orange;
 }
+.blue{
+	color:@blue;
+}
+.bluewhite{
+	color:@bluewhite;
+}
 
 .color-bg{
 	background-color:@color;
@@ -50,12 +58,30 @@
 .orange-bg{
 	background-color:@orange;
 }
+.blue-bg{
+	background-color:@blue;
+}
+.bluewhite-bg{
+	background-color:@bluewhite;
+}
 
 a{
 	color:@black;
 }
+.blue-links > a{
+	color:@black !important;
+}
+.blue-list-links > li > a{
+	color:@black !important;
+}
 a:hover{
 	color:@orange;
+}
+.blue-links a:hover{
+	color:@blue !important;
+}
+.blue-list-links > li > a:hover{
+	color:@blue !important;
 }
 ::selection {
   background: @color;
@@ -138,7 +164,7 @@ nav.mastnav a:hover{
 	border-color: @color;
 } 
 .sticky-sidebar ul li a:hover span{
-	color: @orange;
+	color: @blue;
 }
 .share-panel ul li a:hover  span{
 	color: @orange;
