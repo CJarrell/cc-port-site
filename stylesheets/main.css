@@ -163,7 +163,16 @@ div#preloader {
   width: 100%; 
   z-index: 99999; 
 }
-
+div.preloader-intro { 
+  background: none repeat scroll 0 0 white; 
+  background-size: contain;
+  height: 100%;
+  margin-left: -240px;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  z-index: 99999; 
+}
 #status { 
   width: 200px; 
   height: 200px; 
@@ -472,6 +481,7 @@ footer.mastfoot{
 footer.mastfoot .row{
   padding: 60px 0px;
 }
+
 .social-wrap{
   padding: 0;
 }
@@ -609,9 +619,34 @@ nav.mastnav a:focus{
      -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out;
 }
+.mastwrap.contact-wrap{
+  margin: 0 auto;
+  margin-left: 350px;
+  -webkit-transition: all .4s ease-in-out;
+     -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+}
 .page-section{
   padding: 120px 0;
 }
+.contact-wrap{
+  background-image: url("https://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/q_auto/v1467256754/THEBEAM-_wssnmv.jpg");
+  background-position: top center;
+  background-repeat:no-repeat;
+  background-size: cover;
+
+  
+}
+.form-container{
+  opacity: .88;
+  padding-top: 100px;
+
+}
+
+
+
 
 /*INTRO*/
 
@@ -869,6 +904,12 @@ nav.mastnav a:focus{
   width:33.3%;
   height: auto;
  }
+ .works-item-logo { 
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: auto;
+ }
 .works-masonry-container .works-item-one {
   margin: 0 !important;
   padding: 0 !important;
@@ -905,35 +946,9 @@ nav.mastnav a:focus{
   padding: 0 !important;
   width: 100% !important;
 }
-.works-masonry-container .works-item-one-third-spaced{
-  margin: 1% !important;
-  padding: 0 !important;
-  width: 31.3% !important;
-}
-.works-masonry-container .works-item-one-half-spaced{
-  margin: 1% !important;
-  padding: 0 !important;
-  width: 48% !important;
-}
-.works-masonry-container .works-item-two-third-spaced{
-  margin: 1% !important;
-  padding: 0 !important;
-  width: 64.6% !important;
-}
-.works-masonry-container .works-item-one-fourth-spaced{
-  
-  margin: 0 auto;
-  padding: 0 !important;
-  width: 33% !important;
-}
 
 
-
-
-
-
-
-    
+ 
 /* Portfolio Isotope Transitions */ 
 
     .isotope, .isotope .isotope-item {
@@ -1253,166 +1268,8 @@ nav.mastnav a:focus{
 } 
 
 /*CONTACT*/
-.contact-wrap{
-  background-image: url("http://res.cloudinary.com/colby-jarrell-creative-consultant/image/upload/c_scale,w_1000/v1467256754/THEBEAM-_wssnmv.jpg");
-  background-repeat: no-repeat;
-  background-size:contain;
 
-}
-.contact-form-wrap{
-  top: 500px;
-}
-#googlemaps
-{
-    width: 100%;
-    height: 100%;
-}
-#googlemaps iframe {
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-    border:0;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
-    -webkit-backface-visibility: hidden;  /* Fix for transition flickering */
-  }
-}
-.contact-box{
-}
-.contact-box h1{
-  font-size: 28px;
-  line-height: 35px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-}  
-.contact-box h5{
-  font-size: 24px;
-  line-height: 31px;
-  margin-bottom: 30px;
-}
-.contact-form-wrap{
-    display: none;
-    padding-top: 30px;
-}
-.contact-item{
-    padding: 0px;
-}
-input {
-  background: transparent !important;
-    border: none !important;
-    border-bottom: 2px solid !important;
-    border-radius: 0px !important;
-    box-shadow: none !important;
-    color: #444 !important;
-    font-size: 14px !important;
-    font-weight: 300 !important;
-    line-height: 25px !important;
-    height: 50px !important;
-    margin-bottom: 30px !important;
-    padding: 0px !important;
-    width: 100%;
-    -webkit-transition: all .8s linear;
-       -moz-transition: all .8s linear;
-        -ms-transition: all .8s linear;
-         -o-transition: all .8s linear;
-            transition: all .8s linear;
-}
-input:focus, textarea:focus {
-    border: none !important;
-    color: #444 !important;
-    border-bottom: 1px solid !important;
-    -webkit-transition: all .8s linear;
-       -moz-transition: all .8s linear;
-        -ms-transition: all .8s linear;
-         -o-transition: all .8s linear;
-            transition: all .8s linear;
-}
-textarea {
-    background: transparent !important;
-    border: none !important;
-    border-bottom: 2px solid !important;
-    border-radius: 0px !important;
-    box-shadow: none !important;
-    color: #444 !important;
-    font-size: 14px !important;
-    font-weight: 300 !important;
-    line-height: 25px !important;
-    margin-top: 0;
-    padding: 0px !important;
-    resize: none;
-    width: 100%;
-    -webkit-transition: all .8s linear;
-       -moz-transition: all .8s linear;
-        -ms-transition: all .8s linear;
-         -o-transition: all .8s linear;
-            transition: all .8s linear;
-}
-input.send_message {
-    background: none repeat scroll 0 0 #EF4A4A;
-    color: #FFFFFF;
-    cursor: pointer;
-    float: left;
-    font-size: 12px;
-    font-weight: 400;
-    margin: 0;
-    width: 120px;
-}
-input.send_message:hover {
-    background: none repeat scroll 0 0 #262932;
-}
-fieldset {
-    border: 0 none;
-    float: left;
-    padding: 0;
-    position: relative;
-    width: 100%;
-}
-fieldset h1 {
-    color: #000000;
-    font-size: 24px;
-}
-.contact-label-box {
-    color: #222;
-    font-size: 24px;
-    line-height: 31px;
-    padding: 30px 20px;
-    text-align: center;
-}
-.contact-label-box > span {
-    display: block;
-    margin-right: 10px;
-}
-.contact-label-box > span > img {
-    height: 60px;
-    width: 60px;
-}
-.contact-label-box a:hover {
-    color: #CCCCCC;
-    text-decoration: none;
-}
-.contact .alert{
-    box-shadow: none;
-    border:none;
-    border-radius: 0;
-    text-shadow:none;
-    font-size: 12px;
-    line-height: 19px;
-    margin-bottom:10px;
-    padding:10px;
-    background:#000;
-    color: #fff;
-    text-align: left;
-}
-.btn-wrap{
-    margin-top: 60px;
-}
-.space-left{
-    margin-left: 1%;
-}
+
 
 
 .alert{

@@ -1409,8 +1409,7 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+
   margin-right: auto;
   margin-left: auto;
 }
@@ -4620,7 +4619,7 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding: 30px 15px;
+  
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;

@@ -45,8 +45,8 @@ there.
     display: inline-block;
   }
   .mobile-nav{
-    height: 500px;
     display: block;
+
   }
   .masthead, .sticky-sidebar, .share-panel, .featured-panel{
     display: none;
@@ -59,21 +59,7 @@ there.
     margin-right: 0;
   }
   
-  .works-masonry-container .works-item, .works-masonry-container .works-item-one-third, 
-  .works-masonry-container .works-item-two-third, .works-masonry-container .works-item-one-half,
-  .works-masonry-container .works-item-one-fourth{
-    width: 50% !important;
-  }
-  .works-masonry-container .works-item-spaced, .works-masonry-container .works-item-one-third-spaced, 
-  .works-masonry-container .works-item-two-third-spaced, .works-masonry-container .works-item-one-half-spaced,
-  .works-masonry-container .works-item-one-fourth-spaced{
-    width: 48% !important;
-    margin: 1% !important;
-  }
-  .works-masonry-container .works-item-full-width, .works-masonry-container .works-item-full-width-spaced{
-    width: 100% !important;
-    margin: 0 !important;
-  }
+  
   .slideshow-count{
     left: 10px;
   }
@@ -87,27 +73,38 @@ there.
   .caption h3, .services-item{
     margin-bottom: 25px;
   }
+
+
  
 
 }
 
 /*iPhone 6Plus Landscape Mode*/
 @media screen and (max-width: 736px) {
-  .container{
+   .container{
     width: 636px;
     padding-left: 50px;
     padding-right: 50px;
   }
+  .mastwrap.spaced-left{
+    margin-left: 0;
+    margin-right: 0;
+  }
+ 
  
 }
 
 
 /*iPhone 6 Landscape Mode*/
 @media screen and (max-width: 667px) {
-  .container{
+   .container{
     width: 567px;
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .mastwrap.spaced-left{
+    margin-left: 0;
+    margin-right: 0;
   }
   
 }
@@ -120,20 +117,29 @@ there.
     padding-left: 50px;
     padding-right: 50px;
   }
+  .mastwrap.spaced-left{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
 
 
 }
 
-/*iPhone Landscape Mode and Mediium Smart Phones*/
+/*iPhone Landscape Mode and Medium Smart Phones*/
 @media screen and (max-width: 480px) {
-  .container{
+   .container{
     width: 400px;
     padding-left: 40px;
     padding-right: 40px;
   }
-  .works-masonry-container .works-item, .works-masonry-container .works-item-one-third, 
-  .works-masonry-container .works-item-two-third, .works-masonry-container .works-item-one-half,
-  .works-masonry-container .works-item-one-fourth{
+  .mastwrap.spaced-left{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .works-masonry-container .works-item, .works-masonry-container .works-item-one, 
+  .works-masonry-container .works-item-two,.works-masonry-container .works-item-four, .works-masonry-container .works-item-five, .works-masonry-container .works-item-half,
+  .works-masonry-container .works-item-one-full{
     width: 100% !important;
   }
   .works-masonry-container .works-item-spaced, .works-masonry-container .works-item-one-third-spaced, 
@@ -156,13 +162,15 @@ there.
   ul.slimmenu.collapsed li .sub-collapser, ul.slimmenu > li > a:first-child{
     font-size: 16px;
     line-height: 23px;
-    padding: 3px 0;
+    padding: 3px;
+    margin: 0 auto;
   }
   ul.slimmenu{
-    padding: 25px 25px 50px;
+   margin: 0 auto;
+   text-align: center;
   }
   ul.slimmenu li a{
-    padding: 3px 0;
+    margin: 0 auto;
   }
   .elements-counter{
     width: 100%;
@@ -170,6 +178,7 @@ there.
     margin-bottom: 25px;
   }
   .elements-counter .number{
+
     font-size: 48px;
     line-height: 55px;
   }
@@ -177,6 +186,7 @@ there.
     font-size: 14px;
     line-height: 21px;
   }
+
   
 }
 
@@ -211,6 +221,8 @@ there.
   h2{
     font-size: 1.2em;
   }
+ 
+
 }
 
 /*iPhone 6 Portrait Mode*/
@@ -244,7 +256,9 @@ there.
   h2{
     font-size: 1.2em;
   }
+ 
 }
+
 
 /*iPhone 5S, 5, 4S & 4 Portrait Mode and Very Small Mobile Phones*/
 @media screen and (max-width: 320px) {
@@ -253,16 +267,21 @@ there.
     padding-left: 10px;
     padding-right: 10px;
   }
+  .works-container{
+    background-color: #F9F9F9;
+  }
   .works-masonry-container{
     width: 100%;
     padding: 0;
     margin:0 auto;
+    
   }
   .hide-on-desktop{
     margin-top: 50px;
     display:block;
     visibility: visible;
   }
+  
 
   body{
     font-size: 10px;
@@ -278,4 +297,7 @@ there.
   h2{
     font-size: 1.2em;
   } 
+
+
+ 
 }

@@ -312,7 +312,7 @@ function initMobileNav() {
         $(document).ready(function() {
                 //Mobile Only Navigation (multi level)
                 $('ul.slimmenu').slimmenu({
-                    resizeWidth: '1200',
+                    
                     collapserTitle: '',
                     easingEffect: 'easeInOutQuint',
                     animSpeed: 'medium',
@@ -443,7 +443,8 @@ function initBGVimeo() {
 
                   //shows BG video only if .intro03 div is present
             if( !device.tablet() && !device.mobile() ) {
-                    /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
+                /* plays the BG Vimeo or Youtube video if non-mobile device is detected*/ 
+                preloaderInit;
                 $("body").okvideo({ source: '172334024', //set your video source here
 
                     autoplay:true,
@@ -739,7 +740,7 @@ function initMasonry() {
                     if( isVisible == true) {
                         $container1.isotope({
                             // options
-                            
+
                             itemSelector: '.works-item',
                             percentPosition: true,
                             fitWidth: true,
