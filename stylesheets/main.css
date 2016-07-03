@@ -908,6 +908,7 @@ nav.mastnav a:focus{
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
+  padding-left: 15px;
   height: auto;
  }
 .works-masonry-container .works-item-one {
