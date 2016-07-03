@@ -161,7 +161,7 @@ div#preloader {
   position: fixed;
   top: 0; 
   width: 100%; 
-  z-index: 99999; 
+  z-index: 99998; 
 }
 div.preloader-intro { 
   background: none repeat scroll 0 0 white; 
@@ -171,7 +171,7 @@ div.preloader-intro {
   position: fixed;
   top: 0; 
   width: 100%; 
-  z-index: 99999; 
+  z-index: 99998; 
 }
 #status { 
   width: 200px; 
@@ -477,6 +477,7 @@ header.masthead .logo-blue{
 footer.mastfoot{
   width: 100%;
   position: relative;
+  z-index: 99999;
 }
 footer.mastfoot .row{
   padding: 60px 0px;
@@ -905,10 +906,11 @@ nav.mastnav a:focus{
   height: auto;
  }
  .works-item-logo { 
+  
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 15px;
-  padding-left: 15px;
+  margin-left: -10px;
   height: auto;
  }
 .works-masonry-container .works-item-one {
