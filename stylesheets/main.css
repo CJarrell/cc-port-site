@@ -492,7 +492,7 @@ footer.mastfoot .row{
 }
 .foot-social li {
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 15px;
     margin-bottom: 0;
 }
 .foot-social li a > img {
@@ -640,9 +640,13 @@ nav.mastnav a:focus{
 
   
 }
+/*Contact Form*/
+.contact-topper{
+  padding-top: 100px;
+}
 .form-container{
   opacity: .88;
-  padding-top: 100px;
+  padding-top: 15px;
 
 }
 
