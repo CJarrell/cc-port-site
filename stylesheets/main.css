@@ -24,7 +24,7 @@ html, body{
   overflow-x: hidden;
 }
 p{
-  font-size: 14px;
+  font-size: 18px;
   line-height: 24px;
   margin-bottom: 0;
   color:#999;
@@ -133,10 +133,13 @@ a:focus {
 .btn-otto-color{
   border:solid 3px;
   background: transparent;
+  background-color: #fff;
+
 }
 .btn-otto-color:hover{
   border:solid 3px;
   color: #fff;
+
 }
 
 
@@ -212,7 +215,8 @@ header.masthead .inner a h1{
 }
 header.masthead .logo{
   margin-top: 25px;
-  margin-left: 15px;
+
+  
 }
 header.masthead .logo-blue{
   margin-top: 25px;
@@ -996,6 +1000,7 @@ nav.mastnav a:focus{
 
 
 /*ABOUT*/
+
 .promo h1{
   border: solid 6px #292929;
   padding: 40px;
@@ -1041,9 +1046,17 @@ nav.mastnav a:focus{
   text-align: center;
   margin: 0 auto;
 }
-.services-item i{
+.services-item{
+  padding: 22px;
+  line-height: 75px;
+}
+.services-item .services-svg{
   font-size: 48px;
-  line-height: 48px;
+  
+  fill: #093048;
+  max-width: 300px;
+  margin: 0 auto;
+
   display: block;
             -webkit-transition: all .4s ease-in-out;
                -moz-transition: all .4s ease-in-out;
@@ -1051,22 +1064,28 @@ nav.mastnav a:focus{
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
 }          
-.services-item:hover i{
-  opacity: 0.8;
+.services-item:hover .services-svg{
+  fill: #e0710e;
             -webkit-transition: all .4s ease-in-out;
                -moz-transition: all .4s ease-in-out;
                 -ms-transition: all .4s ease-in-out;
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
-}         
+}        
+
 .services-item h4{
   margin-top: 10px;
   margin-bottom: 15px;
-  font-size: 16px;
-  line-height: 23px;
+  padding: 5px;
+  font-size: 25px;
+  line-height:25px;
   letter-spacing: 2px;
   text-transform: uppercase;
 } 
+ul.sub-services{
+
+  list-style-type: none;
+}
 .phrase-carousel-item{
   text-align: center;
   padding: 0 30px;
@@ -1375,7 +1394,7 @@ nav.mastnav a:focus{
       text-transform: uppercase; 
       padding: 5px 0; 
       margin: 10px 0 1px 0;
-      font-size: 14px;
+      font-size: 20px;
       line-height: 21px;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -1389,6 +1408,7 @@ nav.mastnav a:focus{
     }
     .price_figure {
       font-size: 24px; 
+      letter-spacing: 9px;
       text-transform: uppercase; 
       vertical-align: middle; 
       display: table-cell;
@@ -1398,7 +1418,7 @@ nav.mastnav a:focus{
       display: block;
     }
     .price_tenure {
-      font-size: 11px; 
+      font-size: 15px; 
     }
     
     /*Features*/
@@ -1411,7 +1431,8 @@ nav.mastnav a:focus{
     .features li {
       padding: 12px 15px;
       border-bottom: 1px solid #ccc; 
-      font-size: 11px; 
+      font-size: 15px; 
+       letter-spacing: 3px;
       list-style-type: none;
     }
     
@@ -1433,7 +1454,7 @@ nav.mastnav a:focus{
       padding: 20px;
     }
     .price_block_inner{
-      border: solid 2px #121212;
+      border: solid 2px #e0710e;
     }
     .price_block:hover {
       transform: scale(1.04) translateY(-5px); 
@@ -1453,13 +1474,28 @@ nav.mastnav a:focus{
       .price_block:nth-child(odd):hover {border: 0 none;}
     }
     @media only screen and (min-width : 992px){
-      .price_block {width: 25%;}
+      .price_block {width: 33%;}
       .price_block {border-right: 1px solid transparent; border-bottom: 0 none;}
       .price_block:last-child {border-right: 0 none;}
       
       .price_block:hover {border: 0 none;}
     }
-    
+    .price-sheet{
+      width: auto;
+      height: auto;
+
+    }
+    .price-sheet th{
+      
+      letter-spacing: 3px;
+      font-size: 20px;
+    }
+    .price-sheet td{
+      
+      letter-spacing: 1px;
+      font-size: 17px;
+      
+    }
 
 
 /* 6. Utilities

@@ -1,12 +1,12 @@
 @color:#e0710e;
 @white:#FFFFFF;
 @silver:#f1f1f1;
-@grey:#CCCCCC;
+@grey:#292929;
 @dark:#093048;
 @black:#121212;
 @orange:#e0710e;
 @blue:#2B9DE4;
-@bluewhite:#F9F9F9 ;
+@bluewhite:#F9F9F9;
 
 
 .color{
@@ -66,7 +66,7 @@
 }
 
 a{
-	color:@black;
+	color:@dark;
 }
 .blue-links > a{
 	color:@black !important;
@@ -75,7 +75,10 @@ a{
 	color:@black !important;
 }
 .orange-list-links > li > a{
-	color:@white !important;
+	color:@dark !important;
+}
+.orange-links > li > a{
+	color:@orange !important;
 }
 a:hover{
 	color:@orange;
@@ -88,6 +91,9 @@ a:hover{
 }
 .orange-list-links > li > a:hover{
 	color:@orange !important;
+}
+.orange-links > li > a:hover{
+	color:@white !important;
 }
 ::selection {
   background: @color;
@@ -187,7 +193,7 @@ nav.mastnav a:hover{
 }
 ul.slimmenu.collapsed li .sub-collapser, 
 ul.slimmenu > li > a:first-child{
-	color:@black;
+	color:@dark;
 }
 .featured-panel-item-overlay h3 span{
 	border-color: @white;
