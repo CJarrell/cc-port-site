@@ -1,8 +1,8 @@
 // IMPORTANT NOTE: This is an AJAX powered web template. So improper editing of even a single line of code will break this website from loading properly. AJAX will work only on a localhost or web server. We recommend you to use a localhost to perform editing of this template. We prefer FireFox as development browser.
 
 
-/*global $:false */
-/*global window: false */
+// global $:false 
+// global window: false 
 
 (function(){
   "use strict";
@@ -329,7 +329,10 @@ function initLightbox() {
         $(document).ready(function() {
             //VENOBOX
             $('.venobox, .image-lightbox-link').venobox({
+                infinigall: true,
                 numeratio: true
+
+                
             });
         });
         // ready: ends

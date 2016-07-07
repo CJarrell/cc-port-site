@@ -1911,8 +1911,8 @@ frameheight: '',
 border: '0',
 bgcolor: '#fff',
 titleattr: 'title', // specific attribute to get a title (e.g. [data-title]) - thanx @mendezcode
-numeratio: false,
-infinigall: false,
+numeratio: true,
+infinigall: true,
 overlayclose: true // disable overlay click-close - thanx @martybalandis
 };
 var option = $.extend(defaults, options);
