@@ -503,20 +503,21 @@ footer.mastfoot .row{
   color: white !important;
   width: 32px;
     opacity: 1;
-  -webkit-transition: all .8s linear;
-     -moz-transition: all .8s linear;
+    -webkit-transition: all .8s linear;
+    -moz-transition: all .8s linear;
     -ms-transition: all .8s linear;
-     -o-transition: all .8s linear;
-      transition: all .8s linear;
+    -o-transition: all .8s linear;
+    transition: all .8s linear;
 
 }
 .foot-social li a > img:hover {
     opacity: 0.5;
-  -webkit-transition: all .8s linear;
-     -moz-transition: all .8s linear;
+
+    -webkit-transition: all .8s linear;
+    -moz-transition: all .8s linear;
     -ms-transition: all .8s linear;
-     -o-transition: all .8s linear;
-      transition: all .8s linear;
+    -o-transition: all .8s linear;
+    transition: all .8s linear;
 }
 .credits {
     padding: 0;
@@ -1046,16 +1047,16 @@ nav.mastnav a:focus{
   text-align: center;
   margin: 0 auto;
 }
+/* ABOUT Services */
 .services-item{
   padding: 22px;
   line-height: 75px;
 }
 .services-item .services-svg{
-  font-size: 48px;
-  
   fill: #093048;
   max-width: 300px;
   margin: 0 auto;
+  margin-bottom: 20px;
 
   display: block;
             -webkit-transition: all .4s ease-in-out;
@@ -1072,12 +1073,20 @@ nav.mastnav a:focus{
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
 }        
-
+.services-item h2{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 25px;
+  line-height:25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+} 
 .services-item h4{
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 5px;
-  font-size: 25px;
+  font-size: 20px;
   line-height:25px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1085,6 +1094,23 @@ nav.mastnav a:focus{
 ul.sub-services{
 
   list-style-type: none;
+}
+/*About BIO*/
+.about-bio{
+  border-top: ridge 3px #e0710e;
+  border-bottom: ridge 3px #e0710e;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright:0px;
+  -moz-border-radius-bottomleft:0px;
+  -moz-border-radius-bottomright:0px;
+  -webkit-border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  border-top-left-radius:0px;
+  border-top-right-radius:0px;
+  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px;
 }
 .phrase-carousel-item{
   text-align: center;
@@ -1174,7 +1200,9 @@ ul.sub-services{
                 -ms-transition: all .4s ease-in-out;
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
+
 }
+
 /*NEWS*/
 
 .news h3{
@@ -1456,14 +1484,14 @@ ul.sub-services{
     .price_block_inner{
       border: solid 2px #e0710e;
     }
-    .price_block:hover {
+    /*.price_block:hover {
       transform: scale(1.04) translateY(-5px); 
       z-index: 1; 
       border-bottom: 0 none;
     }
     .price_block:hover .action_button {
       background: linear-gradient(#F9B84A, #DB7224); 
-    }
+    }*/
     
     
     @media only screen and (min-width : 480px) and (max-width : 992px) {
@@ -1480,18 +1508,16 @@ ul.sub-services{
       
       .price_block:hover {border: 0 none;}
     }
-    .price-sheet{
-      width: auto;
-      height: auto;
-
-    }
+   
+  
     .price-sheet th{
-      
+      padding: 3px;
       letter-spacing: 3px;
       font-size: 20px;
     }
+    
     .price-sheet td{
-      
+      padding: 3px;
       letter-spacing: 1px;
       font-size: 17px;
       
