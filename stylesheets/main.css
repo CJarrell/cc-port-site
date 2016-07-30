@@ -625,6 +625,15 @@ nav.mastnav a:focus{
      -o-transition: all .4s ease-in-out;
       transition: all .4s ease-in-out;
 }
+.mastwrap-off-port{
+  margin-left: 350px;
+  margin-right: 25px !important;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
 .mastwrap.contact-wrap{
   margin: 0 auto;
   margin-left: 350px;

@@ -90,6 +90,15 @@ there.
     margin-left: 0;
     margin-right: 0;
   }
+  .mastwrap-off-port{
+  margin-left: 350px;
+  margin-right: 0px !important;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
  
  
 }
