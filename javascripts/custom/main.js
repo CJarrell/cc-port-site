@@ -552,22 +552,22 @@ function initOwlCarousel() {
                 });
             }
 
-             if ( $(".team-carousel").length ) {
-                $(".team-carousel").owlCarousel({
+             if ( $(".testimonials-carousel").length ) {
+                $(".testimonials-carousel").owlCarousel({
                     loop:true,
                     margin:0,
-                    dots:false,
-                    nav:true,
+                    dots:true,
+                    nav:false,
                     navText: false,
                     responsive:{
                         0:{
                             items:1
                         },
                         600:{
-                            items:2
+                            items:1
                         },
                         1000:{
-                            items:3
+                            items:1
                         }
                     }
                 });

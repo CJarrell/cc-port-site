@@ -1129,11 +1129,11 @@ ul.sub-services{
   max-width: 100px;
   display: inline-block !important;
 }   
-.team-item{
+.testimonial-item{
   text-align: center;
   padding: 0 20px;
 }        
-.team-item h4{
+.testimonial-item h4{
   margin-top: 0px;
   padding-top: 10px;
   font-size: 16px;
@@ -1141,14 +1141,14 @@ ul.sub-services{
   letter-spacing: 2px;
   text-transform: uppercase;
 }          
-.team-item img{
+.testimonial-item img{
             -webkit-transition: all .4s ease-in-out;
                -moz-transition: all .4s ease-in-out;
                 -ms-transition: all .4s ease-in-out;
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
 }                    
-.team-item:hover img{
+.testimonial-item:hover img{
   opacity: 0.3;
   border: solid 8px #000;
             -webkit-transition: all .4s ease-in-out;
@@ -1157,7 +1157,7 @@ ul.sub-services{
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
 }        
-.team-item h6{
+.testimonial-item h6{
   font-size: 16px;
   line-height: 23px;
   padding-bottom: 10px;
@@ -1174,7 +1174,7 @@ ul.sub-services{
                  -o-transition: all .4s ease-in-out;
                     transition: all .4s ease-in-out;
 }
-.team-item:hover .team-overlay{
+.testimonial-item:hover .team-overlay{
   display: block;
             -webkit-transition: all .4s ease-in-out;
                -moz-transition: all .4s ease-in-out;
