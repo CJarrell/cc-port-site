@@ -217,6 +217,10 @@ there.
     display:block;
     visibility: visible;
   }
+  .hide-on-mobile{
+    display: none;
+    visibility: hidden;
+  }
   body{
     font-size: 10px;
   }
@@ -251,6 +255,10 @@ there.
     margin-top: 50px;
     display:block;
     visibility: visible;
+  }
+  .hide-on-mobile{
+    display: none;
+    visibility: hidden;
   }
   body{
     font-size: 10px;
@@ -290,6 +298,10 @@ there.
     margin-top: 50px;
     display:block;
     visibility: visible;
+  }
+  .hide-on-mobile{
+    display: none;
+    visibility: hidden;
   }
   
 
